@@ -46,7 +46,7 @@ The chart can be installed with the following command:
 ```bash
 export VSTS_TOKEN=$(echo -n '<VSTS TOKEN>' | base64)
 
-helm install --namespace <NAMESPACE> --set vstsToken=${VSTS_TOKEN} --set vstsAccount=<VSTS ACCOUNT> --set vstsPool=<VSTS POOL> -f values.yaml vsts-agent .
+helm install --name vsts --namespace <NAMESPACE> --set vstsToken=${VSTS_TOKEN} --set vstsAccount=<VSTS ACCOUNT> --set vstsPool=<VSTS POOL> -f values.yaml .
 ```
 
 Your deployment should look like this if everything works fine:
